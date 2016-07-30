@@ -26,21 +26,22 @@ public class Lombaurut {
             d = x.length;
             for(b = 1; b <x.length-1; b++){
                 c = x[b];
-                for(a = b-1; a>=0 && (x[a]<c); a --){
+                for(a = b-1; a<=0 && (x[a]<c); a --){
                     x[a+1] = x[a];
                  }
                 x[a+1] = c;
-                 }
+                 }     
+            
                  Xutil.writeTxtFileFromArray(x, "sorted.dat");      
-                 int[] y = Xutil.readTxtFileToArray("sorted.dat");
+                 int[] e = Xutil.readTxtFileToArray("sorted.dat");
          
             for(b = (x.length)-1;b > x.length/2;b--){
                 
-                y[b] = temp;
-                y[b] = y[(d-b)-1];
-                y[(d-b)-1] = temp;  
+                e[b] = temp;
+                e[b] = e[(d-b)-1];
+                e[(d-b)-1] = temp;  
                 }
-             Xutil.writeTxtFileFromArray(y, "sorted.dat");
+             Xutil.writeTxtFileFromArray(e, "sorted.dat");
         // =====================================================================
         // END
         long end = Xutil.getTime();
