@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Lombaurut {
-        @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws IOException {
 
         // Baca text file, masukan isi text file kedalam variable array.       
